@@ -13,6 +13,6 @@ body {
   width: 100vw;
   overflow: hidden;
   background-color: #1d3557;
-  background-image: url("./image.jpg");
+  background-image: url("./assets/bg.jpg");
   background-size: cover;
 }
