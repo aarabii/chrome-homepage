@@ -56,10 +56,3 @@ const Time = () => {
 };
 
 export default Time;
-
-// <Typography variant="h5" gutterBottom>
-// {greeting}
-// </Typography>
-// <Typography variant="h6" color="textSecondary">
-// {formattedTime}
-// </Typography>

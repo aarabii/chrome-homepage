@@ -18,15 +18,16 @@ function App() {
         backdropFilter: "blur(1rem)",
       }}
     >
-      <Box
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-        mb="1rem"
-      >
+      <Box display="flex" justifyContent="center" alignItems="center" mb="1rem">
         <Time />
       </Box>
-      <Box>
+      <Box
+        display="flex"
+        flexDirection="column"
+        justifyContent="center"
+        alignItems="center"
+        height="100%"
+      >
         <Searchbar />
         <WidgetContainer />
       </Box>
