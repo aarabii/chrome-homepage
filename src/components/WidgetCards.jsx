@@ -1,55 +1,48 @@
-import { Box, Card } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import React from "react";
-import useFavicon from "../hook/useFavicon";
-import useTitle from "../hook/useTitle";
 
-// const WidgetCards = ({ srcURL }) => {
-//   const favicon = useFavicon(srcURL);
-//   const title = useTitle(srcURL);
-//   return (
-//     <Card>
-//       <Box
-//         display="flex"
-//         alignItems="center"
-//         marginRight="1rem"
-//         sx={{ position: "relative" }}
-//       >
-//         <img src={favicon} alt="favicon" />
-//       </Box>
-//       <Box
-//         display="flex"
-//         alignItems="center"
-//         marginRight="1rem"
-//         sx={{ position: "relative" }}
-//       >
-//         <h1>{title}</h1>
-//       </Box>
-//     </Card>
-//   );
-// };
-
-const WidgetCards = ({ key, imageURL, title, url }) => {
+const WidgetCards = ({ title, imageURL, url }) => {
   return (
-    <Card key={key}>
-      <Box
-        display="flex"
-        alignItems="center"
-        marginRight="1rem"
-        sx={{ position: "relative" }}
-      >
-        <img src={imageURL} alt="favicon" />
+    <Box
+      backgroundColor="rgb(25, 25, 25)"
+      width="100px"
+      height="100px"
+      display="flex"
+      flexDirection="column"
+      justifyContent="center"
+      alignItems="center"
+      borderRadius="0.75rem"
+      sx={{
+        "&:hover": {
+          cursor: "pointer",
+          backgroundColor: "rgb(35, 35, 35)",
+        },
+      }}
+      onClick={() => {
+        window.open(url, "_blank");
+      }}
+    >
+      <Box>
+        <img
+          src={imageURL}
+          alt={`${title}'s logo`}
+          width="50px"
+          height="50px"
+        />
       </Box>
-      <Box
-        display="flex"
-        alignItems="center"
-        marginRight="1rem"
-        sx={{ position: "relative" }}
-      >
-        <a href={url} target="_blank">
+      <Box backgroundColor="transparent">
+        <Typography
+          sx={{
+            color: "white",
+            fontWeight: "lighter",
+            fontSize: "1rem",
+          }}
+          variant="h5"
+        >
           {title}
-        </a>
+        </Typography>
       </Box>
-    </Card>
+    </Box>
   );
 };
 
