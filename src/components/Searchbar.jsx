@@ -3,9 +3,7 @@ import {
   Avatar,
   TextField,
   Box,
-  Typography,
   Menu,
-  IconButton,
 } from "@mui/material";
 import MenuItem from "@mui/material/MenuItem";
 import SearchIcon from "@mui/icons-material/Search";
@@ -38,14 +36,6 @@ const Searchbar = () => {
   const [searchEngine, setSearchEngine] = useState(searchEngines[0]);
   const [searchTerm, setSearchTerm] = useState("");
   const [anchorEl, setAnchorEl] = useState(null);
-
-  const handleMenuOpen = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleMenuClose = () => {
-    setAnchorEl(null);
-  };
 
   return (
     <Box
