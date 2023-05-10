@@ -5,10 +5,14 @@ export default function useTitle(url) {
 
   useEffect(() => {
     const getTitle = async () => {
-      const response = await fetch(url);
-      const html = await response.text();
-      const match = html.match(/<title>(.*?)<\/title>/);
-      setTitle(match ? match[1] : null);
+      try {
+        const response = await fetch(`/api/fetch?url=${url}`);
+        const html = await response.text();
+        const match = html.match(/<title>(.*?)<\/title>/);
+        setTitle(match ? match[1] : "Untitled");
+      } catch (error) {
+        setTitle("Untitled");
+      }
     };
 
     getTitle();

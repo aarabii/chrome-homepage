@@ -18,10 +18,10 @@ import reddit_logo from "./logos/reddit.png";
 import sap_logo from "./logos/sap.png";
 import snapchat_logo from "./logos/snapchat.png";
 import spotify_logo from "./logos/spotify.png";
-import telegram_logo from "./logos/telegram.png";
+import telegram_logo from "./logos/telegram-app.png";
 import tiktok_logo from "./logos/tiktok.png";
 import twitter_logo from "./logos/twitter.png";
-import weebtoon_logo from "./logos/weebtoon.png";
+import webtoon_logo from "./logos/webtoon.png";
 import whatsapp_logo from "./logos/whatsapp.png";
 import youtube_logo from "./logos/youtube.png";
 import youtubeMusic_logo from "./logos/youtube-music.png";
@@ -168,7 +168,7 @@ const LOGOS = [
   {
     id: 24,
     name: "Weebtoon",
-    image: weebtoon_logo,
+    image: webtoon_logo,
     url: "https://www.webtoons.com/en/",
   },
   {
@@ -190,3 +190,4 @@ const LOGOS = [
     url: "https://music.youtube.com/",
   },
 ];
+export default LOGOS;
